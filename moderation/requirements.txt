@@ -1,0 +1,4 @@
+﻿# Moderation Bot Requirements
+discord.py>=2.3.0
+toml>=0.10.2
+python-dotenv>=1.0.0

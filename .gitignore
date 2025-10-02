@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.hypothesis/
+
+# Bot Tokens and Secrets - CRITICAL
+*.token
+.env
+.env.*
+config.local.toml
+secrets/
+credentials/
+
+# Bot Instance Files (from testing templates)
+logs/
+*.log
+*.pid
+bot_data/
+database.db
+*.sqlite
+*.sqlite3
+
+# Discord bot cache
+discord_cache/
+*.db-shm
+*.db-wal
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+.cache/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Template testing artifacts
+test_bot/
+test_instance/
+test_output/
+
+# Don't commit actual bot instances
+**/bot_instances/
+**/running_bots/
+
+# Documentation build
+docs/_build/
+site/

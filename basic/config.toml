@@ -1,0 +1,33 @@
+# Basic Bot Configuration
+# This file contains the configuration for your Discord bot
+
+[bot]
+# Your bot token from Discord Developer Portal
+# NEVER commit this file with a real token!
+token = "YOUR_BOT_TOKEN_HERE"
+
+# Command prefix
+prefix = "!"
+
+# Bot description
+description = "A basic Discord bot powered by MultiCord"
+
+[logging]
+# Logging level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+level = "INFO"
+
+# Log file settings
+max_file_size_mb = 10
+backup_count = 5
+
+[features]
+# Enable/disable specific features
+welcome_messages = true
+auto_roles = false
+moderation = false
+
+[database]
+# Database configuration (if needed)
+enabled = false
+type = "sqlite"
+path = "data/bot.db"

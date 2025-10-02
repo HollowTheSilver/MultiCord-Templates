@@ -1,0 +1,149 @@
+{
+  "$schema": "./template.schema.json",
+  "repository": {
+    "name": "MultiCord Official Templates",
+    "url": "https://github.com/HollowTheSilver/MultiCord-Templates",
+    "version": "1.0.0",
+    "description": "Official Discord bot templates for MultiCord CLI",
+    "maintainers": ["MultiCord Team"],
+    "last_updated": "2025-09-22"
+  },
+  "templates": {
+    "basic": {
+      "name": "Basic Discord Bot",
+      "description": "Simple, extensible Discord bot with command handling and event processing",
+      "version": "1.0.0",
+      "author": "MultiCord Team",
+      "category": "general",
+      "tags": ["starter", "simple", "beginner-friendly", "commands", "events"],
+      "discord_py_version": ">=2.0.0",
+      "python_version": ">=3.9",
+      "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
+      "featured": true,
+      "default": true,
+      "features": {
+        "slash_commands": false,
+        "prefix_commands": true,
+        "database": false,
+        "api_integration": false,
+        "voice_support": false
+      },
+      "permissions": {
+        "required": ["send_messages", "embed_links", "read_message_history"],
+        "optional": []
+      },
+      "compatibility": {
+        "multicord_version": ">=1.0.0",
+        "platforms": ["windows", "linux", "macos"]
+      }
+    },
+    "moderation": {
+      "name": "Moderation Bot",
+      "description": "Comprehensive moderation bot with kick, ban, timeout, warn, and role management",
+      "version": "1.0.0",
+      "author": "MultiCord Team",
+      "category": "moderation",
+      "tags": ["moderation", "admin", "server-management", "warnings", "logging"],
+      "discord_py_version": ">=2.0.0",
+      "python_version": ">=3.9",
+      "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
+      "featured": true,
+      "features": {
+        "slash_commands": false,
+        "prefix_commands": true,
+        "database": false,
+        "api_integration": false,
+        "voice_support": false
+      },
+      "permissions": {
+        "required": [
+          "send_messages",
+          "embed_links",
+          "kick_members",
+          "ban_members",
+          "manage_messages",
+          "manage_roles",
+          "moderate_members"
+        ],
+        "optional": ["manage_channels", "view_audit_log"]
+      },
+      "compatibility": {
+        "multicord_version": ">=1.0.0",
+        "platforms": ["windows", "linux", "macos"]
+      }
+    },
+    "music": {
+      "name": "Music Bot",
+      "description": "Feature-rich music bot with YouTube integration, queue management, and playback controls",
+      "version": "1.0.0",
+      "author": "MultiCord Team",
+      "category": "entertainment",
+      "tags": ["music", "audio", "youtube", "voice", "entertainment", "queue"],
+      "discord_py_version": ">=2.0.0",
+      "python_version": ">=3.9",
+      "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
+      "featured": true,
+      "features": {
+        "slash_commands": false,
+        "prefix_commands": true,
+        "database": false,
+        "api_integration": true,
+        "voice_support": true
+      },
+      "permissions": {
+        "required": [
+          "send_messages",
+          "embed_links",
+          "connect",
+          "speak"
+        ],
+        "optional": ["move_members", "priority_speaker"]
+      },
+      "dependencies": {
+        "system": ["ffmpeg"],
+        "services": []
+      },
+      "compatibility": {
+        "multicord_version": ">=1.0.0",
+        "platforms": ["windows", "linux", "macos"]
+      },
+      "notes": [
+        "Requires ffmpeg to be installed on the system",
+        "YouTube download functionality requires yt-dlp",
+        "May require additional configuration for some hosting providers"
+      ]
+    }
+  },
+  "categories": {
+    "general": {
+      "name": "General Purpose",
+      "description": "Basic bots, utility bots, starter templates",
+      "icon": "⚡"
+    },
+    "moderation": {
+      "name": "Moderation & Administration",
+      "description": "Community management, anti-spam, logging, role management",
+      "icon": "🛡️"
+    },
+    "entertainment": {
+      "name": "Entertainment & Games",
+      "description": "Music bots, games, fun commands, trivia",
+      "icon": "🎮"
+    },
+    "utility": {
+      "name": "Utility & Tools",
+      "description": "Tools, automation, integration bots, productivity",
+      "icon": "🔧"
+    },
+    "advanced": {
+      "name": "Advanced Templates",
+      "description": "Complex architectures, multi-service bots, advanced patterns",
+      "icon": "🚀"
+    }
+  },
+  "statistics": {
+    "total_templates": 3,
+    "featured_count": 3,
+    "categories_count": 5
+  }
+}

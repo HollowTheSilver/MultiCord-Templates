@@ -53,16 +53,12 @@ class PermissionsCog(commands.Cog, name="Permissions"):
         self.db_path = db_path
 
         # Initialize permission manager
-        self.permissions = PermissionManager(
-            bot=bot,
-            use_database=use_database,
-            db_path=db_path
-        )
+        self.permissions = PermissionManager(bot=bot)
 
     async def cog_load(self):
         """Called when the cog is loaded."""
-        await self.permissions.initialize()
-        self.bot.logger.info("Permissions system initialized")
+        # No initialization needed - PermissionManager is ready after __init__
+        self.bot.logger.info("Permissions system loaded")
 
     async def cog_unload(self):
         """Called when the cog is unloaded."""

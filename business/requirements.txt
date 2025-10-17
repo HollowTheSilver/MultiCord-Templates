@@ -1,0 +1,27 @@
+# MultiCord Business Bot - Base Dependencies
+# ===========================================
+
+# Discord.py - Core Discord API wrapper
+discord.py>=2.3.0
+
+# TOML Configuration Parser
+# Python 3.11+ has tomllib built-in, but we need tomli for older versions
+tomli>=2.0.0; python_version < "3.11"
+
+# Optional: Enhanced logging and monitoring
+# Uncomment if you need these features:
+# coloredlogs>=15.0    # Colored console logs
+# python-json-logger>=2.0.0  # JSON structured logging
+
+# Optional: Database support
+# Uncomment based on your database choice:
+# aiosqlite>=0.17.0    # SQLite async support
+# asyncpg>=0.27.0      # PostgreSQL async support
+# aiomysql>=0.1.0      # MySQL async support
+
+# Optional: Additional utilities
+# Uncomment if needed for your project:
+# python-dotenv>=1.0.0  # Advanced .env file support
+# aiohttp>=3.8.0       # Async HTTP requests
+# pillow>=10.0.0       # Image processing
+# PyNaCl>=1.5.0        # Voice support (required for voice features)

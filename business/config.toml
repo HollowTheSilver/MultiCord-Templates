@@ -1,0 +1,49 @@
+# MultiCord Business Bot Configuration
+# ======================================
+# Professional Discord bot configuration for commissioned projects
+
+[bot]
+# Bot display name and description
+name = "Business Bot"
+description = "Professional Discord bot for commissioned work"
+
+# Command prefix (can be changed per deployment)
+prefix = "!"
+
+# Enable built-in help command
+enable_help = true
+
+# Bot status (shown in Discord presence)
+# Examples: "Serving customers", "Type !help", "v1.0.0"
+status = "Ready to serve"
+
+# Privileged intents (requires Discord Developer Portal approval for verified bots)
+[bot.privileged_intents]
+message_content = false  # Required for reading message content
+members = false          # Required for member join/leave events
+presences = false        # Required for presence updates
+
+[features]
+# Feature flags for optional functionality
+auto_sync_commands = true      # Automatically sync slash commands on startup
+error_webhooks = false         # Send error notifications to webhook
+command_logging = true         # Log all command usage
+audit_logging = false          # Log administrative actions
+
+[logging]
+# Logging configuration
+level = "INFO"                 # DEBUG, INFO, WARNING, ERROR, CRITICAL
+max_file_size_mb = 10         # Maximum log file size before rotation
+backup_count = 5              # Number of backup log files to keep
+
+[performance]
+# Performance tuning
+max_messages = 1000           # Maximum messages to cache
+chunk_guilds_at_startup = true  # Fetch all members on startup (requires members intent)
+
+# Example feature configurations (customize per project)
+[custom]
+# Add project-specific configuration here
+# welcome_channel = "welcome"
+# admin_role = "Admin"
+# verification_enabled = false

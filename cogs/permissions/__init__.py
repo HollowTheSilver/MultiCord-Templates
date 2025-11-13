@@ -87,6 +87,14 @@ async def setup(bot: commands.Bot):
         use_database = perm_config.get('use_database', False)
         db_path = perm_config.get('db_path', None)
 
-    # Create and add the cog
-    cog = PermissionsCog(bot, use_database=use_database, db_path=db_path)
-    await bot.add_cog(cog)
+    # Create and add the backend cog
+    backend_cog = PermissionsCog(bot, use_database=use_database, db_path=db_path)
+    await bot.add_cog(backend_cog)
+
+    # Make permission_manager accessible to command cog
+    bot.permission_manager = backend_cog.permissions
+
+    # Import and add the command interface cog
+    from .commands import Permissions as PermissionsCommands
+    commands_cog = PermissionsCommands(bot)
+    await bot.add_cog(commands_cog)

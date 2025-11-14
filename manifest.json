@@ -21,6 +21,9 @@
       "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
       "featured": true,
       "default": true,
+      "changelog": {
+        "1.0.0": "Initial release with command handling and event processing"
+      },
       "features": {
         "slash_commands": false,
         "prefix_commands": true,
@@ -48,6 +51,9 @@
       "python_version": ">=3.9",
       "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
       "featured": true,
+      "changelog": {
+        "1.0.0": "Initial release with kick, ban, timeout, warn, and role management features"
+      },
       "features": {
         "slash_commands": false,
         "prefix_commands": true,
@@ -83,6 +89,9 @@
       "python_version": ">=3.9",
       "files": ["bot.py", "config.toml", "requirements.txt", "README.md"],
       "featured": true,
+      "changelog": {
+        "1.0.0": "Initial release with YouTube integration, queue management, and playback controls"
+      },
       "features": {
         "slash_commands": false,
         "prefix_commands": true,
@@ -124,6 +133,9 @@
       "python_version": ">=3.9",
       "files": ["bot.py", "config.toml", "requirements.txt", ".env.example", "README.md", "cogs/.gitkeep"],
       "featured": true,
+      "changelog": {
+        "1.0.0": "Initial release with automatic cog loading, structured logging, and production-ready features"
+      },
       "features": {
         "slash_commands": false,
         "prefix_commands": true,
@@ -194,6 +206,9 @@
       "database_optional": true,
       "files": ["__init__.py", "permissions.py", "permission_models.py", "permission_persistence.py", "embeds.py", "requirements.txt", "manifest.json", "README.md"],
       "featured": true,
+      "changelog": {
+        "1.0.0": "Initial release with 9-level permission hierarchy, role classification, and Unicode normalization"
+      },
       "features": {
         "permission_levels": 9,
         "role_classification": true,
